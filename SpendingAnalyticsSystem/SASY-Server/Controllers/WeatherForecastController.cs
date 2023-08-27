@@ -1,4 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Options;
+using SpendingAnalyticsSystem.DIConfiguration;
 
 namespace SpendingAnalyticsSystem.Controllers
 {
@@ -12,10 +14,12 @@ namespace SpendingAnalyticsSystem.Controllers
     };
 
         private readonly ILogger<WeatherForecastController> _logger;
+        private readonly IOptions<PositionOptions> _options;
 
-        public WeatherForecastController(ILogger<WeatherForecastController> logger)
+        public WeatherForecastController(ILogger<WeatherForecastController> logger, IOptions<PositionOptions> options)
         {
             _logger = logger;
+            _options = options;
         }
 
         [HttpGet(Name = "GetWeatherForecast")]

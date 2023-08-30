@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Options;
-using SpendingAnalyticsSystem.DIConfiguration;
+using SpendingAnalyticsSystem.API.DIConfiguration;
 
 namespace SpendingAnalyticsSystem.Controllers
 {
@@ -14,12 +14,17 @@ namespace SpendingAnalyticsSystem.Controllers
     };
 
         private readonly ILogger<WeatherForecastController> _logger;
-        private readonly IOptions<PositionOptions> _options;
+        private  IOptions<PositionOptions> _options;
+        private IOptions<DbOptions> _dbOptions;
 
-        public WeatherForecastController(ILogger<WeatherForecastController> logger, IOptions<PositionOptions> options)
+        public WeatherForecastController(ILogger<WeatherForecastController> logger, IConfiguration configuration, IOptions<PositionOptions> options, IOptions<DbOptions> dbOptions)
         {
             _logger = logger;
             _options = options;
+            _dbOptions = dbOptions;
+
+            var test = configuration.GetSection("Position").GetRequiredSection("Title");
+
         }
 
         [HttpGet(Name = "GetWeatherForecast")]

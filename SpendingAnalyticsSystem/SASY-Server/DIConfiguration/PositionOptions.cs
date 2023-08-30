@@ -1,4 +1,4 @@
-﻿namespace SpendingAnalyticsSystem.DIConfiguration
+﻿namespace SpendingAnalyticsSystem.API.DIConfiguration
 {
     public class PositionOptions
     {

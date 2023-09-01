@@ -1,4 +1,4 @@
-namespace SpendingAnalyticsSystem
+namespace SpendingAnalyticsSystem.API
 {
     public class WeatherForecast
     {

@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Design;
 using SpendingAnalyticsSystem.API.EntityConfigurations;
-using SpendingAnalyticsSystem.Infrastructure.Models;
+using SpendingAnalyticsSystem.API.Models;
 
 namespace SpendingAnalyticsSystem.API
 {

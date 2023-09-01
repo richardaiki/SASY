@@ -2,7 +2,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Options;
 using SpendingAnalyticsSystem.API.DIConfiguration;
 
-namespace SpendingAnalyticsSystem.Controllers
+namespace SpendingAnalyticsSystem.API.Controllers
 {
     [ApiController]
     [Route("[controller]")]
